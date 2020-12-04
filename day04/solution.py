@@ -31,11 +31,11 @@ def is_valid(key, value):
     color_pattern = re.compile("^#([0-9a-z]{6})$")
     pid_pattern = re.compile("^([0-9]{9})$")
     if key == "byr":
-        return year_pattern.match(value) and value.isnumeric() and 1920 <= int(value) <= 2002
+        return year_pattern.match(value) and 1920 <= int(value) <= 2002
     elif key == "iyr":
-        return year_pattern.match(value) and value.isnumeric() and 2010 <= int(value) <= 2020
+        return year_pattern.match(value) and 2010 <= int(value) <= 2020
     elif key == "eyr":
-        return year_pattern.match(value) and value.isnumeric() and 2020 <= int(value) <= 2030
+        return year_pattern.match(value) and 2020 <= int(value) <= 2030
     elif key == "hgt":
         if not height_pattern.match(value):
             return False
