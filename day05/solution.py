@@ -1,5 +1,4 @@
 import fileinput
-import re
 
 boarding_passes = []
 with fileinput.input('input.txt') as f:
@@ -30,6 +29,5 @@ ids = list(map(seat, boarding_passes))
 print(max(ids))
 
 # PART 2
-sorted_ids = sorted(ids)
-all_ids = set(range(min(sorted_ids), max(sorted_ids)))
-print(list(all_ids.difference(sorted_ids))[0])
+all_ids = set(range(min(ids), max(ids)))
+print(list(all_ids.difference(ids))[0])
